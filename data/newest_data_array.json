@@ -11,7 +11,7 @@
         "HEFA Camelina"
     ],
     "metrics":[
-        "CO2e",
+        "CO\u2082e",
         "VOC",
         "CO",
         "NOx",
@@ -38,7 +38,7 @@
     "emissions": [
         {
             "id": "Conventional Crude",
-            "CO2e": {
+            "CO\u2082e": {
                 "WTP": 9.857911423,
                 "PTW": 73.18189257,
                 "WTW": 83.03980399,
@@ -179,7 +179,7 @@
         },
         {
             "id": "Conventional Oil Sand",
-            "CO2e": {
+            "CO\u2082e": {
                 "WTP": 29.46047355,
                 "PTW": 73.18189257,
                 "WTW": 102.6423661,
@@ -320,7 +320,7 @@
         },
         {
             "id": "Conventional Shale Oil",
-            "CO2e": {
+            "CO\u2082e": {
                 "WTP": 9.592713652,
                 "PTW": 73.18189257,
                 "WTW": 82.77460622,
@@ -461,7 +461,7 @@
         },
         {
             "id": "Conventional US Mix",
-            "CO2e": {
+            "CO\u2082e": {
                 "WTP": 11.58758272,
                 "PTW": 73.18189257,
                 "WTW": 84.76947529,
