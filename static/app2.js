@@ -1,10 +1,10 @@
 // Single data source URL
-const DATA_URL = "https://raw.githubusercontent.com/ArgonneEducation/GREET_Jet_WTW_Calculator/refs/heads/main/data/newest_data_array.json";
+//const DATA_URL = "https://raw.githubusercontent.com/ArgonneEducation/GREET_Jet_WTW_Calculator/refs/heads/main/data/newest_data_array.json";
 
 // makePanel loads the dataset, drills down to data, filters the data to get emissions data
 // and then creates a panel with the emissions data.
 function makePanel(feedstock, metric) {
-    d3.json(DATA_URL).then(function (data) {
+    d3.json("https://raw.githubusercontent.com/ArgonneEducation/GREET_Jet_WTW_Calculator/refs/heads/main/data/newest_data_array.json").then(function (data) {
         let dataArray = data.emissions;
 
         // Filter data based on feedstock and metric
@@ -23,7 +23,7 @@ function makePanel(feedstock, metric) {
 
 // Update the bar chart with data
 function makeBarChart(feedstock, metric) {
-    d3.json(DATA_URL).then(function (data) {
+    d3.json("https://raw.githubusercontent.com/ArgonneEducation/GREET_Jet_WTW_Calculator/refs/heads/main/data/newest_data_array.json").then(function (data) {
         let dataArray = data.emissions;
 
         // Filter data based on feedstock and metric
@@ -75,7 +75,7 @@ function makeBarChart(feedstock, metric) {
 
 // Populate the data table with all emissions data
 function makeDataTable(metric) {
-    d3.json(DATA_URL).then(function (data) {
+    d3.json("https://raw.githubusercontent.com/ArgonneEducation/GREET_Jet_WTW_Calculator/refs/heads/main/data/newest_data_array.json").then(function (data) {
         let dataArray = data.emissions;
         let tableBody = d3.select("#tableBody");
         
@@ -98,7 +98,7 @@ function makeDataTable(metric) {
 
 // Populate dropdown menus and initialize the page
 function init() {
-    d3.json(DATA_URL).then(function (data) {
+    d3.json("https://raw.githubusercontent.com/ArgonneEducation/GREET_Jet_WTW_Calculator/refs/heads/main/data/newest_data_array.json").then(function (data) {
         // Populate feedstock dropdown from the list in the json file
         let feedstockDropdown = d3.select("#selFeedstock");
         let feedstocks = data.feedstocks;
