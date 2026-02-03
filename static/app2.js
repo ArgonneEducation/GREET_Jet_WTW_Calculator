@@ -1,5 +1,5 @@
 // Single data source URL
-const DATA_URL = "https://github.com/ArgonneEducation/GREET_Jet_WTW_Calculator/blob/main/data/newest_data_array.json";
+const DATA_URL = "https://raw.githubusercontent.com/ArgonneEducation/GREET_Jet_WTW_Calculator/refs/heads/main/data/newest_data_array.json";
 
 // makePanel loads the dataset, drills down to data, filters the data to get emissions data
 // and then creates a panel with the emissions data.
