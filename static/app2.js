@@ -1,8 +1,10 @@
+// Single data source URL
+const DATA_URL = "https://raw.githubusercontent.com/ArgonneEducation/GREET_Jet_WTW_Calculator/refs/heads/main/data/newest_data_array.json";
+
 // makePanel loads the dataset, drills down to data, filters the data to get emissions data
 // and then creates a panel with the emissions data.
-
 function makePanel(feedstock, metric) {
-    d3.json("https://raw.githubusercontent.com/ArgonneEducation/GREET_Jet_WTW_Calculator/refs/heads/main/data/newest_data_array.json").then(function (data) {
+    d3.json(DATA_URL).then(function (data) {
         let dataArray = data.emissions;
 
         // Filter data based on feedstock and metric
@@ -17,11 +19,11 @@ function makePanel(feedstock, metric) {
             console.error("Feedstock or metric not found in data.");
         }
     });
+}
 
-};
 // Update the bar chart with data
 function makeBarChart(feedstock, metric) {
-    d3.json("https://raw.githubusercontent.com/ArgonneEducation/GREET_Jet_WTW_Calculator/refs/heads/main/data/newest_data_array.json").then(function (data) {
+    d3.json(DATA_URL).then(function (data) {
         let dataArray = data.emissions;
 
         // Filter data based on feedstock and metric
@@ -63,16 +65,40 @@ function makeBarChart(feedstock, metric) {
                 yaxis: { title: 'Emissions by LCA Stage' },
                 width: 500
             };
-
+            
             Plotly.newPlot('bar', plot, layout);
         } else {
             console.error("Feedstock or metric not found in data.");
         }
     });
-};
+}
+
+// Populate the data table with all emissions data
+function makeDataTable(metric) {
+    d3.json(DATA_URL).then(function (data) {
+        let dataArray = data.emissions;
+        let tableBody = d3.select("#tableBody");
+        
+        // Clear existing table data
+        tableBody.html("");
+        
+        // Populate table with data for all feedstocks
+        dataArray.forEach(feedstock => {
+            if (feedstock[metric]) {
+                let row = tableBody.append("tr");
+                row.append("td").text(feedstock.id);
+                row.append("td").text(feedstock[metric].WTP);
+                row.append("td").text(feedstock[metric].PTW);
+                row.append("td").text(feedstock[metric].WTW);
+                row.append("td").html(feedstock[metric].units);
+            }
+        });
+    });
+}
+
 // Populate dropdown menus and initialize the page
 function init() {
-    d3.json("https://raw.githubusercontent.com/ArgonneEducation/GREET_Jet_WTW_Calculator/refs/heads/main/data/newest_data_array.json").then(function (data) {
+    d3.json(DATA_URL).then(function (data) {
         // Populate feedstock dropdown from the list in the json file
         let feedstockDropdown = d3.select("#selFeedstock");
         let feedstocks = data.feedstocks;
@@ -87,11 +113,18 @@ function init() {
             metricDropdown.append("option").text(metric).property("value", metric);
         });
 
+        // Populate data table metric dropdown
+        let tableMetricDropdown = d3.select("#metricSelect");
+        metrics.forEach(metric => {
+            tableMetricDropdown.append("option").text(metric).property("value", metric);
+        });
+
         // Initialize with the first feedstock and metric
         let initialFeedstock = feedstocks[0];
         let initialMetric = metrics[0];
         makePanel(initialFeedstock, initialMetric);
         makeBarChart(initialFeedstock, initialMetric);
+        makeDataTable(initialMetric);
     });
 }
 
@@ -110,5 +143,9 @@ function metricChanged(metric) {
     makeBarChart(feedstock, metric);
 }
 
+// Handle data table metric dropdown change
+function tableMetricChanged(metric) {
+    makeDataTable(metric);
+}
 
 init(); // call init function to load the data and create the dropdown list.
