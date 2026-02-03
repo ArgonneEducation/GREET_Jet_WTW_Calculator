@@ -11,7 +11,7 @@ In addition, this interactive is intended for use with case studies developed by
 BRIDGES is a bioenergy case study-based educational toolkit created in partnership with Argonne National Laboratory and Idaho National Laboratory, as well as education, community, industry, and other government partners.  You can learn more about the program at https://www.energy.gov/eere/bioenergy/bioenergy-research-and-education-bridge-program .
 
 ## Using the app
-In the deployed app, there is a dropdown box in the top left corner.  By default, ["Conventional Crude"](#conventional-crude) is selected, but users can select more specific conventional petroleum feedstocks or blends, or can select from a variety of aviation biofuels feedstocks.  A second dropdown box near the top left is for the metric to be used.  By default, [grams of CO2 equivalent](#co2e) per MegaJoule is selected, but other emissions and metrics can be chosen as well.
+In the deployed app, there is a dropdown box in the top left corner.  By default, ["Conventional Crude"](#conventional-crude) is selected, but users can select more specific conventional petroleum feedstocks or blends, or can select from a variety of aviation biofuels feedstocks.  A second dropdown box near the top left is for the metric to be used.  By default, [grams of CO<sub>2</sub> equivalent](#co2e) per MegaJoule is selected, but other emissions and metrics can be chosen as well.
 
 The large bar chart graphic displays the results for [well-to-pump](#well-to-pump-wtp), [pump-to-wake](#pump-to-wake-ptw), and [well-to-wake](#well-to-wake-wtw) emissions for the chosen feedstock and metric.  These are defined in the [glossary](#Glossary).
 
@@ -24,7 +24,7 @@ The "Well-to-Pump" values are for all of the processes involved in producing a f
 
 # Glossary
 
-### CO2e 
+### CO<sub>2</sub>e 
 Carbon dioxide equivalent.  Includes emissions from typical gases that contribute to the greenhouse effect, reported as carbon dioxide emissions, to attempt to fully encompass greenhouse effect ramifications from a process.
 
 ### Conventional Crude
