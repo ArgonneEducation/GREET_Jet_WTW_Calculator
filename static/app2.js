@@ -61,7 +61,7 @@ function makeBarChart(feedstock, metric) {
             let layout = {
                 title: 'Emissions for Selected Feedstock and Metric',
                 barmode: 'overlay',
-                xaxis: { title: emiss_values.units.replace(/CO2e/g, 'CO<sub>2</sub>e')s },
+                xaxis: { title: emiss_values.units.replace(/CO2e/g, 'CO<sub>2</sub>e') },
                 yaxis: { title: 'Emissions by LCA Stage' },
                 width: 500
             };
