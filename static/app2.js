@@ -14,7 +14,7 @@ function makePanel(feedstock, metric) {
             d3.select(".WTP").text(`Well-to-pump: ${currentMetric.WTP}`);
             d3.select(".PTW").text(`Pump-to-wake: ${currentMetric.PTW}`);
             d3.select(".WTW").text(`Well-to-wake: ${currentMetric.WTW}`);
-            d3.select(".UNITS").text(`Units: ${currentMetric.units}`);
+            d3.select(".UNITS").html(`Units: ${currentMetric.units.replace(/CO2e/g, 'CO<sub>2</sub>e')}`);
         } else {
             console.error("Feedstock or metric not found in data.");
         }
@@ -61,7 +61,7 @@ function makeBarChart(feedstock, metric) {
             let layout = {
                 title: 'Emissions for Selected Feedstock and Metric',
                 barmode: 'overlay',
-                xaxis: { title: emiss_values.units },
+                xaxis: { title: emiss_values.units.replace(/CO2e/g, 'CO<sub>2</sub>e')s },
                 yaxis: { title: 'Emissions by LCA Stage' },
                 width: 500
             };
