@@ -90,7 +90,7 @@ function makeDataTable(metric) {
                 row.append("td").text(feedstock[metric].WTP);
                 row.append("td").text(feedstock[metric].PTW);
                 row.append("td").text(feedstock[metric].WTW);
-                row.append("td").html(feedstock[metric].units);
+                row.append("td").html(feedstock[metric].units.replace(/CO2e/g, 'CO<sub>2</sub>e'));
             }
         });
     });
