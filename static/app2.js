@@ -38,7 +38,13 @@ function makeBarChart(feedstock, metric) {
                 type: 'bar',
                 name: 'WTP',
                 orientation: 'h',
-                marker: { color: 'blue', width: 1 }
+                marker: { color: '#D81B60', // Strong magenta
+                pattern: {
+                    shape: '/', // Diagonal lines
+                    size: 10,   // Pattern size
+                    solidity: 0.5 // Transparency of the pattern
+                }, width:2
+    }
             };
             let trace2 = {
                 x: [emiss_values.PTW],
@@ -46,7 +52,14 @@ function makeBarChart(feedstock, metric) {
                 type: 'bar',
                 name: 'PTW',
                 orientation: 'h',
-                marker: { color: 'red', width: 1 }
+                marker: {
+                color: '#FFC107', // Bright amber
+                pattern: {
+                    shape: '\\', // opposite diagonal lines
+                    size: 10,
+                    solidity: 0.5
+                }, width: 2
+    }
             };
             let trace3 = {
                 x: [emiss_values.WTW],
@@ -54,7 +67,13 @@ function makeBarChart(feedstock, metric) {
                 type: 'bar',
                 name: 'WTW',
                 orientation: 'h',
-                marker: { color: 'green', width: 1 }
+                marker: { color: '#1E88E5', // Medium blue
+                pattern: {
+                    shape: 'x', // crosshatch pattern
+                    size: 10,
+                    solidity: 0.5
+                }, width: 2
+    }
             };
 
             let plot = [trace3, trace2, trace1];
@@ -63,10 +82,10 @@ function makeBarChart(feedstock, metric) {
                 barmode: 'overlay',
                 xaxis: { title: emiss_values.units.replace(/CO2e/g, 'CO<sub>2</sub>e') },
                 yaxis: { title: 'Emissions by LCA Stage' },
-                width: 500
+                autosize: true
             };
             
-            Plotly.newPlot('bar', plot, layout);
+            Plotly.newPlot('bar', plot, layout, { responsive: true });
         } else {
             console.error("Feedstock or metric not found in data.");
         }
