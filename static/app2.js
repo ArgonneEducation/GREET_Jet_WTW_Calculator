@@ -40,7 +40,7 @@ function makeBarChart(feedstock, metric) {
                 orientation: 'h',
                 marker: { color: '#D81B60', // Strong magenta
                 pattern: {
-                    shape: '/', // Diagonal lines
+                    shape: '|', // vertical lines
                     size: 10,   // Pattern size
                     solidity: 0.5 // Transparency of the pattern
                 }, width:2
@@ -55,7 +55,7 @@ function makeBarChart(feedstock, metric) {
                 marker: {
                 color: '#FFC107', // Bright amber
                 pattern: {
-                    shape: '\\', // opposite diagonal lines
+                    shape: '-', // horizontal lines
                     size: 10,
                     solidity: 0.5
                 }, width: 2
@@ -69,19 +69,20 @@ function makeBarChart(feedstock, metric) {
                 orientation: 'h',
                 marker: { color: '#1E88E5', // Medium blue
                 pattern: {
-                    shape: 'x', // crosshatch pattern
+                    shape: '+', // plus pattern
                     size: 10,
                     solidity: 0.5
                 }, width: 2
     }
             };
 
-            let plot = [trace3, trace2, trace1];
+            let plot = [trace3, trace2, trace1]; // Order of traces determines stacking order, WTW at the bottom, then PTW, then WTP on top
             let layout = {
                 title: 'Emissions for Selected Feedstock and Metric',
                 barmode: 'overlay',
                 xaxis: { title: emiss_values.units.replace(/CO2e/g, 'CO<sub>2</sub>e') },
                 yaxis: { title: 'Emissions by LCA Stage' },
+                legend: {traceorder: 'reversed', font: {size: 20}},
                 autosize: true
             };
             
