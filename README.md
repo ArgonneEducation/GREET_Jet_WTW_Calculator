@@ -24,6 +24,9 @@ The "Well-to-Pump" values are for all of the processes involved in producing a f
 
 # Glossary
 
+### BC
+Black Carbon.  Black carbon is a fine carbonaceous material from incomplete combustion and is more commonly identified as soot.  Particles of black carbon are generally in the PM<sub>2.5</sub> category, which is small enough to penetrate deep into human lungs.  As such, it has public health effects and other environmental effects.
+
 ### CO<sub>2</sub>e 
 Carbon dioxide equivalent.  Includes emissions from typical gases that contribute to the greenhouse effect, reported as carbon dioxide emissions, to attempt to fully encompass greenhouse effect ramifications from a process.
 
@@ -38,6 +41,9 @@ Selection of Conventional Shale Oil reflects the process and energy requirements
 
 ### Conventional US Mix
 Selection of Conventional US Mix reflects a typical average of petroleum feedstocks used in the US to produce aviation fuel.
+
+### Fossil Energy
+Fossil Energy refers to the total consumption of fossil energy that went into the acquisition, processing, and use of a fuel.
 
 ### FT-Jet Corn Stover
 Corn Stover is the stalks, leaves, and husks from corn plants that remain in the field after the corn harvest.  These can be processed into Jet fuel using a Fischer-Tropsch process.
@@ -57,11 +63,17 @@ This process involves obtaining soybean oil from plants to be processed via the 
 ### Pump-to-wake (PTW)  
 The stage in the life cycle analysis of a fuel that includes the combustion of fuel during vehicle operation.
 
+### Total Energy
+Total Energy refers to a measure of the total consumption of energy from all sources that went into the acquisition, processing, and use of a fuel.  
+
 ### VOC
-Volatile Organic Carbon emissions
+Volatile Organic Compound emissions.  VOCs are organic compounds generally emitted as gases.  Some may have short- or long-term health effects.
+
+### Water Consumption
+Water Consumptionrefers to a measure of the total consumption of water that went into the acquisition, processing, and use of a fuel.
 
 ### Well-to-pump (WTP)
 The stages in the life cycle analysis of a fuel that include exploration, recovery(e.g. from a well), fuel production, and the subsequent transportation of the fuel to the pump which can deliver it to a vehicle.
 
 ### Well-to-wake (WTW)
-In a life cycle analysis of a fuel, includes the addition of well-to-pump and pump-to-wake stages.  Well-to-wake values are also referred to as cradle-to-grave in an attempt to convey that they 
+In a life cycle analysis of a fuel, includes the addition of well-to-pump and pump-to-wake stages.  Well-to-wake values are also referred to as cradle-to-grave in an attempt to convey that they cover the entire life cycle of the fuel from acquisition or production of the feedstock through use of the fuel.
