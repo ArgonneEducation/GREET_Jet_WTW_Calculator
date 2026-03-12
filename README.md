@@ -70,7 +70,7 @@ Total Energy refers to a measure of the total consumption of energy from all sou
 Volatile Organic Compound emissions.  VOCs are organic compounds generally emitted as gases.  Some may have short- or long-term health effects.
 
 ### Water Consumption
-Water Consumptionrefers to a measure of the total consumption of water that went into the acquisition, processing, and use of a fuel.
+Water Consumption refers to a measure of the total consumption of water that went into the acquisition, processing, and use of a fuel.
 
 ### Well-to-pump (WTP)
 The stages in the life cycle analysis of a fuel that include exploration, recovery(e.g. from a well), fuel production, and the subsequent transportation of the fuel to the pump which can deliver it to a vehicle.
